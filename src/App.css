@@ -1,0 +1,113 @@
+/* Navbar.css */
+
+/* General Styling */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #2C3E50;  /* Dark Blue */
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.navbar .logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #ECF0F1;  /* Light Gray */
+}
+
+.navbar .nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.navbar .nav-links li {
+  margin: 0 20px;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: #ECF0F1;  /* Light Gray */
+  font-size: 1.1em;
+  padding: 10px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.navbar .nav-links a:hover {
+  background-color: #3498DB;  /* Bright Blue */
+  color: #fff;
+}
+
+.navbar .profile-image img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.navbar .profile-image img:hover {
+  transform: scale(1.1);
+}
+
+/* Hamburger Menu for Mobile View */
+.navbar .hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.navbar .hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+
+/* Mobile View Styling */
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #2C3E50;  /* Dark Blue */
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 20px;
+    border-top: 2px solid #3498DB;  /* Blue Border */
+  }
+
+  .navbar .nav-links.active {
+    display: flex;
+  }
+
+  .navbar .hamburger {
+    display: flex;
+  }
+
+  /* Hamburger menu transition */
+  .navbar.active .hamburger .line:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+
+  .navbar.active .hamburger .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar.active .hamburger .line:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+}
