@@ -1,4 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* src/components/Navbar.css */
+
 
 /* General Styles */
 .navbar {
@@ -46,10 +53,15 @@
 }
 
 .navbar-profile .profile-image {
-  width: 40px;
-  height: 40px;
+  position: fixed; /* Keeps the image fixed to the viewport */
+  top: 20px;
+  right: 80px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   object-fit: cover;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional shadow for styling */
+  z-index: 1000;
 }
 
 /* Hamburger Menu (Mobile) */
@@ -136,11 +148,19 @@
 
 /* Background Image & Layout */
 .home-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
   background: url("./assets/images/waterfall.jpg") no-repeat center center/cover;
+}
+
+.top-right-image {
+  width: 80px;
+  top: 20px;
+  border-radius: 50%;
+  margin-right: 70%;
 }
 
 /* Left Section - Text */
@@ -163,7 +183,9 @@
 }
 
 .cta-button {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 12px 24px;
   background: #ff6600;
   color: white;
@@ -174,6 +196,7 @@
   transition: transform 0.3s ease-in-out;
 }
 
+
 .cta-button:hover {
   transform: scale(1.1);
 }
@@ -183,6 +206,7 @@
   width: 50%;
   height: 100%;
   background: url("./assets/images/Nkechi 2020.jpg") no-repeat center center/contain;
+  background-size: cover;
   background-position-x: right;
   animation: zoomInRight 1.2s ease-out;
 }
@@ -661,3 +685,82 @@ button[type="submit"]:hover {
 .back-button:hover {
   background: #0056b3;
 }
+/* src/Footer.css */
+.footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  width: 100%; /* Full width */
+  position: relative; /* Fixes footer at the bottom */
+  left: 0; /* Ensure it stretches across the width */
+  bottom: 0; /* Positions it at the bottom */
+  z-index: 1000; /* Ensures it stays on top */
+}
+
+
+/*.footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  width: 100%; /* Ensure footer takes full width */
+  /*position: relative; /* Default to relative if you don't want it fixed at the bottom */
+  /*bottom: 0;
+}*/
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer-logo h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.footer-links ul,
+.footer-social ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-links li,
+.footer-social li {
+  margin: 10px 0;
+}
+
+.footer-links a,
+.footer-social a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+  color: #1abc9c; /* Light green on hover */
+}
+
+.footer-bottom {
+  border-top: 1px solid #34495e;
+  padding-top: 10px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+  color: #bdc3c7;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+

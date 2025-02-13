@@ -111,3 +111,8 @@
     transform: rotate(-45deg) translateY(-8px);
   }
 }
+/* Add this to your App.css */
+.App {
+  min-height: 100vh; /* Ensure the content takes at least the full viewport height */
+  padding-bottom: 60px; /* Add bottom padding equal to the footer height */
+}
