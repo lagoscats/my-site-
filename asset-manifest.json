@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/my-site/static/css/main.a7856942.css",
+    "main.js": "/my-site/static/js/main.68bc25b9.js",
+    "static/media/waterfall.jpg": "/my-site/static/media/waterfall.4460f5d5c1922ea2ad73.jpg",
+    "static/media/profile.jpg": "/my-site/static/media/profile.f4a56e472040a9091232.jpg",
+    "static/media/Nkechi 2020.jpg": "/my-site/static/media/Nkechi 2020.bc10330356ebec260d9f.jpg",
+    "static/media/003.jpg": "/my-site/static/media/003.f79d23173d998a1383c4.jpg",
+    "static/media/mountain-snow.avif": "/my-site/static/media/mountain-snow.8085d638f2b6283c9771.avif",
+    "index.html": "/my-site/index.html",
+    "main.a7856942.css.map": "/my-site/static/css/main.a7856942.css.map",
+    "main.68bc25b9.js.map": "/my-site/static/js/main.68bc25b9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a7856942.css",
+    "static/js/main.68bc25b9.js"
+  ]
+}
